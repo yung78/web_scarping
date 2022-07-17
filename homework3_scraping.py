@@ -50,9 +50,7 @@ def get_info_article():
                 print('______________________________________________________')
                 date = elem.find(class_='tm-article-snippet__datetime-published'
                                  ).find('time').attrs['title'].split(', ')[0]
-                print(date)
                 title = elem.find('h2').find('span').text
-                print(title)
                 link = elem.find(class_='tm-article-snippet__title-link').attrs['href']
                 print(f'<{date}> - <{title}> - <{base_url+link}>')
 
